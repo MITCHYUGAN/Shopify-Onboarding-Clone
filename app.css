@@ -1,0 +1,175 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --pwhite: #FFFFFF;
+    --pbg: #F1F1F1;
+    --bc-50: #656266;
+    --bc-100: #616161;
+    --bc-200: #322F33;
+    --bc-300: #1A1A1A;
+    --fc-light: #E3E3E3;
+    --fc-mid: #616161;
+    --fc-dark: #323232;
+    --sc-50: #EBEBEB;
+    --sc-100: #000000/7%;
+    --sc-200: #FFFFFF/20%;
+    --chover: #F7F7F7;
+    --cpressed: #F0F0F0;
+    --cfocused: #005BD3;
+    --fw-500: 500;
+    --fs-13: 13px;
+}
+
+/* Header Styling  */
+
+header{
+    width: 100%;
+    height: 56px;
+    background-color: var(--bc-300);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+.logo{
+    width: 105px
+}
+
+.search{
+    width: min(480px, 60%);
+}
+
+.search input{
+    width: 100%;
+    height: 32px;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--fc-mid);
+    font-weight: var(--fw-500);
+    font-size: var(--fs-13);
+    line-height: 140%;
+    border: 1px solid var(--bc-100);
+    border-radius: 8px;
+    position: relative;
+    padding-left: 30px;
+}
+
+
+.search img{
+    width: 20px;
+    position: absolute;
+    margin: 6px;
+}
+
+.search input:hover{
+    border: 1px solid var(--stroke-s-100, #E1E1E1);
+}
+
+.search input:focus{
+    border: 2px solid var(--White, #FFF);
+}
+
+.profile_notifiation{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: var(--bc-200);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.notification svg{
+    width: 20px;
+}
+
+/* Contents styling */
+.contents{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.selectplan{
+    width: min(800px, 70%);
+    background-color: var(--bc-300);
+    height: 56px;
+    display: flex;
+    padding: 12px 8px 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.selectplan p{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 140%;
+    color: var(--fc-light);
+}
+
+.selectplan_button_x{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.selectplan_button_x button{
+    color: var(--fc-dark);
+    padding: 6px 12px;
+    border-radius: 6px;
+    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+    background: var(--pwhite);
+    outline: none;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.selectplan_button_x button:hover{
+    background-color: var(--chover);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: var(--pwhite);
+    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+}
+
+.selectplan_button_x button:active{
+    background-color: var(--chover);
+    box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
+    border: none;
+}
+
+.selectplan_button_x button:focus{
+    background: var(--pwhite);
+    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #FFF, 0px -1px 0px 0px #B5B5B5 inset;
+}
+
+.selectplan_button_x svg{
+    cursor: pointer;
+}
