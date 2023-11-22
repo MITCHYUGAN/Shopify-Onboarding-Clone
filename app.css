@@ -27,6 +27,7 @@
     --fw-500: 500;
     --fs-13: 13px;
     --grey-100: #B5B5B5;
+    --gray-200: #303030;
 }
 
 /* Header Styling  */
@@ -52,7 +53,7 @@ header{
 .search input{
     width: 100%;
     height: 32px;
-    background: #303030;
+    background: var(--gray-200);
     border: none;
     outline: none;
     color: var(--grey-100);
@@ -102,15 +103,76 @@ header{
     width: 32px;
     height: 32px;
     border-radius: 8px;
-    background-color: var(--bc-200);
+    background-color: var(--gray-200);
     border: none;
     outline: none;
     cursor: pointer;
 }
 
-.notification svg{
-    width: 20px;
+.notification:hover{
+    background-color: var(--bc-100);
 }
+
+.notification:active{
+    background-color: var(--bc-50);
+}
+
+.notification:focus{
+    background-color: var(--bc-50);
+    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000;
+}
+
+.profile{
+    display: flex;
+    padding: 2px 2px 2px 8px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background-color: var(--gray-200);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.profile:hover{
+    background-color: var(--bc-100);
+}
+
+.profile:active{
+    background-color: var(--bc-50);
+}
+
+.profile:focus{
+    background-color: var(--bc-50);
+    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000;
+}
+
+.profile h4{
+    color: var(--fc-light);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.profile div{
+    display: flex;
+    height: 28px;
+    padding: 9px 5px 10px 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #36FBA1;
+
+    color: rgba(0, 0, 0, 0.40);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+
+
 
 /* Contents styling */
 .contents{
@@ -119,7 +181,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .selectplan{
