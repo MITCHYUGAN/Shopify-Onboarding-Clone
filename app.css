@@ -26,6 +26,7 @@
     --cfocused: #005BD3;
     --fw-500: 500;
     --fs-13: 13px;
+    --grey-100: #B5B5B5;
 }
 
 /* Header Styling  */
@@ -51,10 +52,10 @@ header{
 .search input{
     width: 100%;
     height: 32px;
-    background: none;
+    background: #303030;
     border: none;
     outline: none;
-    color: var(--fc-mid);
+    color: var(--grey-100);
     font-weight: var(--fw-500);
     font-size: var(--fs-13);
     line-height: 140%;
@@ -64,19 +65,27 @@ header{
     padding-left: 30px;
 }
 
+.search input::placeholder{
+    color: var(--grey-100);
+    font-weight: var(--fw-500);
+    font-size: var(--fs-13);
+    line-height: 140%;
+}
 
-.search img{
-    width: 20px;
+.search svg{
+    z-index: 99;
     position: absolute;
-    margin: 6px;
+    margin-top: 6px;
+    margin-left: 8px;
+    width: 15px;
 }
 
 .search input:hover{
-    border: 1px solid var(--stroke-s-100, #E1E1E1);
+    border: 1px solid #E1E1E1;
 }
 
 .search input:focus{
-    border: 2px solid var(--White, #FFF);
+    border: 2px solid #FFF;
 }
 
 .profile_notifiation{
@@ -105,7 +114,7 @@ header{
 
 /* Contents styling */
 .contents{
-    margin-top: 50px;
+    margin-top: 32px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -114,9 +123,9 @@ header{
 }
 
 .selectplan{
-    width: min(800px, 70%);
+    width: min(800px, 100%);
     background-color: var(--bc-300);
-    height: 56px;
+    min-height: 56px;
     display: flex;
     padding: 12px 8px 12px 16px;
     justify-content: space-between;
@@ -141,7 +150,7 @@ header{
     color: var(--fc-dark);
     padding: 6px 12px;
     border-radius: 6px;
-    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+    box-shadow: 0px -1px 0px 0px var(--grey-100) inset;
     background: var(--pwhite);
     outline: none;
     border: none;
@@ -156,7 +165,7 @@ header{
     background-color: var(--chover);
     border: 1px solid rgba(0, 0, 0, 0.10);
     background: var(--pwhite);
-    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+    box-shadow: 0px -1px 0px 0px var(--grey-100) inset;
 }
 
 .selectplan_button_x button:active{
@@ -172,4 +181,25 @@ header{
 
 .selectplan_button_x svg{
     cursor: pointer;
+}
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 400px) {
+    .selectplan{
+        border-radius: 0%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        position: relative;
+    }
+
+    .selectplan_button_x svg{
+        position: absolute;
+        right: 10px;
+        top: 30px;
+    }
 }
