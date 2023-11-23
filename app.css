@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    text-decoration: none;
 }
 
 :root{
@@ -130,7 +131,7 @@ header{
     flex-direction: column;
     gap: 16px;
     display: none;
-    z-index: 99999;
+    z-index: 9999999;
 }
 
 .notificationcontents.active{
@@ -171,13 +172,13 @@ header{
     background-color: var(--bc-100);
 }
 
-.notification:active{
-    background-color: var(--bc-50);
-}
-
 .notification:focus{
     background-color: var(--bc-50);
-    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000;
+    box-shadow: 0px 0px 0px 3px var(--cfocused), 0px 0px 0px 1px #000;
+}
+
+.notification:active{
+    background-color: var(--bc-50);
 }
 
 .profile{
@@ -196,13 +197,13 @@ header{
     background-color: var(--bc-100);
 }
 
-.profile:active{
-    background-color: var(--bc-50);
-}
-
 .profile:focus{
     background-color: var(--bc-50);
-    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000;
+    box-shadow: 0px 0px 0px 3px var(--cfocused), 0px 0px 0px 1px #000;
+}
+
+.profile:active{
+    background-color: var(--bc-50);
 }
 
 .profile h4{
@@ -229,6 +230,145 @@ header{
     line-height: 130%;
 }
 
+.profilecontents{
+    position: absolute;
+    top: 64px;
+    right: 16px;
+    width: min(320px, 90%);
+    padding: 6px 0;
+    border-radius: 14px;
+    border: 1px solid  #DBDBDB;
+    background: #FFF;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    z-index: 99999;
+}
+
+.profilecontents.active{
+    display: flex;
+}
+
+.profilecontentsdiv1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--pbg);
+    padding: 4px 12px 4px 8px;
+}
+
+.profilecontentsdiv1contents{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.profilecontentsdiv1 .profilecontentsdiv1contents h4{
+    font-weight: 600;
+}
+
+.profilecontent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 6px;
+}
+
+.profilecontents hr{
+    width: 100%;
+    height: 0.75px;
+    background: #E1E1E1;
+    border: none;
+}
+
+.profilecontent h4{
+    color: var(--gray-200);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.profilecontentsdiv1contents div {
+    display: flex;
+    height: 28px;
+    padding: 9.625px 5.875px 10.375px 6.125px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #36FBA1;
+    color: rgba(0, 0, 0, 0.40);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.profilecontentsstore{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.profilecontentsstore:hover{
+    background-color: var(--pbg);
+}
+
+.profilecontentsstore:focus{
+    border: 2px solid var(--cfocused);
+}
+
+.profilecontentsdiv1:focus{
+    border: 2px solid var(--cfocused);
+}
+
+.profilecontent a button{
+    width: 100%;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    background: none;
+    color: var(--gray-200);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    border-radius: 8px;
+}
+
+.profilecontent .profileemail{
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.profilecontent .profileemail h4{
+    font-weight: 500;
+}
+
+.profilecontent .profileemail p{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--bc-100);
+}
+.profilecontent a button:focus{
+    border: 2px solid var(--cfocused);
+}
+
+.profilecontent .profileemail:focus{
+    border: 2px solid var(--cfocused);
+}
 
 
 
@@ -239,6 +379,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .selectplan{
@@ -295,7 +436,7 @@ header{
 
 .selectplan_button_x button:focus{
     background: var(--pwhite);
-    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #FFF, 0px -1px 0px 0px #B5B5B5 inset;
+    box-shadow: 0px 0px 0px 3px var(--cfocused), 0px 0px 0px 1px #FFF, 0px -1px 0px 0px #B5B5B5 inset;
 }
 
 .selectplan_button_x svg{
