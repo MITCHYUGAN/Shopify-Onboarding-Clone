@@ -1,7 +1,7 @@
 const closeSelectplanBtn = document.querySelector(".closeselectplan")
 const selectplan = document.querySelector(".selectplan")
 const notification = document.querySelector(".notification")
-const alerts = document.querySelector(".alerts")
+const notificationcontents = document.querySelector(".notificationcontents")
 
 // Close Select Plan
 closeSelectplanBtn.addEventListener("click", () => {
@@ -10,5 +10,5 @@ closeSelectplanBtn.addEventListener("click", () => {
 
 // Toggle Notification
 notification.addEventListener("click", () => {
-    alerts.classList.toggle("active")
+    notificationcontents.classList.toggle("active")
 })
