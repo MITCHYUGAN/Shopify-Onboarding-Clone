@@ -40,10 +40,15 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px;
+    gap: 20px;
 }
 
 .logo{
     width: 105px
+}
+
+.mobilelogo{
+    display: none;
 }
 
 .search{
@@ -93,6 +98,7 @@ header{
     display: flex;
     align-items: center;
     gap: 8px;
+    position: relative;
 }
 
 .notification{
@@ -107,6 +113,56 @@ header{
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.alerts{
+    position: absolute;
+    border: 1px solid #DBDBDB;
+    top: 64px;
+    right: 16px;
+    border-radius: 14px;
+    padding: 16px;
+    width: 383px;
+    height: 118px;
+    background:#FFF;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    display: none;
+}
+
+.alerts.active{
+    display: flex;
+}
+
+.alertsheading{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alerts h4{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    color: var(--gray-200);
+}
+
+.alertsfootertext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--pbg);
+    width: 351px;
+    height: 50px;
+}
+
+.alertsfootertext h4{
+    font-size: 13px;
+    color: var(--bc-100);
 }
 
 .notification:hover{
@@ -249,9 +305,46 @@ header{
 
 
 /* Media Queries */
-@media (max-width: 400px) {
+@media (max-width: 800px) {
+    .contents{
+        margin-top: 28px;
+    }
+
     .selectplan{
         border-radius: 0%;
+    }
+}
+
+@media (max-width: 530px) {
+    header{
+        gap: 15px;
+    }
+    
+    .mobilelogo{
+        display: block;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .search{
+        width: 70%;
+    }
+
+    .profile{
+        padding: 0;
+    }
+
+    .profile h4{
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    .selectplan{
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
