@@ -17,7 +17,6 @@
     --bc-200: #322F33;
     --bc-300: #1A1A1A;
     --fc-light: #E3E3E3;
-    --fc-mid: #616161;
     --fc-dark: #323232;
     --sc-50: #EBEBEB;
     --sc-100: #000000/7%;
@@ -29,6 +28,10 @@
     --fs-13: 13px;
     --grey-100: #B5B5B5;
     --gray-200: #303030;
+}
+
+body{
+    background: var(--pbg);
 }
 
 /* Header Styling  */
@@ -92,7 +95,7 @@ header{
     border: 1px solid #E1E1E1;
 }
 
-.search input:focus{
+.search input:focus-visible{
     border: 2px solid #FFF;
 }
 
@@ -172,7 +175,7 @@ header{
     background-color: var(--bc-100);
 }
 
-.notification:focus{
+.notification:focus-visible{
     background-color: var(--bc-50);
     box-shadow: 0px 0px 0px 3px var(--cfocused), 0px 0px 0px 1px #000;
 }
@@ -197,7 +200,7 @@ header{
     background-color: var(--bc-100);
 }
 
-.profile:focus{
+.profile:focus-visible{
     background-color: var(--bc-50);
     box-shadow: 0px 0px 0px 3px var(--cfocused), 0px 0px 0px 1px #000;
 }
@@ -323,15 +326,15 @@ header{
     background-color: var(--pbg);
 }
 
-.profilecontentsstore:focus{
+.profilecontentsstore:focus-visible{
     border: 2px solid var(--cfocused);
 }
 
-.profilecontentsdiv1:focus{
+.profilecontentsdiv1:focus-visible{
     border: 2px solid var(--cfocused);
 }
 
-.profilecontent a button{
+.profilecontent a{
     width: 100%;
     padding: 6px;
     border: none;
@@ -362,11 +365,11 @@ header{
     line-height: 130%;
     color: var(--bc-100);
 }
-.profilecontent a button:focus{
+.profilecontent a:focus-visible{
     border: 2px solid var(--cfocused);
 }
 
-.profilecontent .profileemail:focus{
+.profilecontent .profileemail:focus-visible{
     border: 2px solid var(--cfocused);
 }
 
@@ -380,6 +383,7 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 16px;
 }
 
 .selectplan{
@@ -406,7 +410,7 @@ header{
     gap: 14px;
 }
 
-.selectplan_button_x button{
+.selectplan_button_x a{
     color: var(--fc-dark);
     padding: 6px 12px;
     border-radius: 6px;
@@ -421,26 +425,227 @@ header{
     line-height: 130%;
 }
 
-.selectplan_button_x button:hover{
+.selectplan_button_x a:hover{
     background-color: var(--chover);
     border: 1px solid rgba(0, 0, 0, 0.10);
     background: var(--pwhite);
     box-shadow: 0px -1px 0px 0px var(--grey-100) inset;
 }
 
-.selectplan_button_x button:active{
+.selectplan_button_x a:active{
     background-color: var(--chover);
     box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
     border: none;
 }
 
-.selectplan_button_x button:focus{
+.selectplan_button_x a:focus-visible{
     background: var(--pwhite);
     box-shadow: 0px 0px 0px 3px var(--cfocused), 0px 0px 0px 1px #FFF, 0px -1px 0px 0px #B5B5B5 inset;
 }
 
 .selectplan_button_x svg{
     cursor: pointer;
+}
+
+.closeselectplan{
+    background: none;
+    border: none;
+}
+
+/* Onboarding Styling */
+.onboarding{
+    width: min(800px, 100%);
+    background-color: var(--pwhite);
+    padding: 8px;
+    border-radius: 18px;
+    border: 1px solid #DBDBDB;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.onboarding-header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    padding: 8px;
+}
+
+#onbording-control{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+#onbording-control:hover{
+    background-color: var(--pbg);
+}
+
+#onbording-control:focus-visible{
+    background: none;
+    border: 2px solid var(--cfocused);
+}
+
+.onboarding-header h4{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    color: var(--gray-200);
+}
+
+.onboarding-header p{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--gray-200);
+}
+
+.onboarding-completed{
+    display: flex;
+    align-items: center;
+}
+
+.onboarding-completed p{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--gray-200);
+}
+
+.onboarding-guides{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.onboarding-guides.active{
+    display: none;
+}
+
+.onboarding-guide-toggle{
+    display: none;
+    gap: 8px;
+    padding: 8px 8px 12px 8px;
+    border-radius: 10px;
+    background: #F3F3F3;
+    align-items: flex-start;
+}
+
+.onboarding-guide-toggle.active{
+    display: flex;
+}
+
+.onboarding-guide-toggle button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.onboarding-guide .onboarding-guide-heading{
+    display: none;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    cursor: pointer;
+    padding: 8px 8px 12px 8px;
+}
+
+.onboarding-guide .onboarding-guide-heading.active{
+    display: flex;
+}
+
+.onboarding-guide .onboarding-guide-heading h4{
+    font-weight: 500;
+    color: var(--gray-200);
+    font-size: 13px;
+    font-style: normal;
+    line-height: 140%;
+}
+
+.onboarding-guide-contents{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.onboarding-guide-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.onboarding-guide-content h4{
+    color: var(--gray-200);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.onboarding-guide-content p{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    color: var(--bc-100);
+
+}
+
+.onboarding-guide-content .learn-more{
+    color: var(--cfocused);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    border: none;
+    background: none;
+}
+
+.onboarding-guide-content .onboarding-button{
+    color: #F6F3F6;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.20);
+    border-right: 1.5px solid rgba(255, 255, 255, 0.20);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.20);
+    background: #404040;
+    box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+}
+
+.onboarding-guide .onboarding-guide-content p{
+    width: 484px;
+}
+
+.onboarding-guide2 .onboarding-guide-content .buttons{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.onboarding-guide2 .onboarding-guide-content .buttons .import-products{
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    color: var(--fc-dark);
 }
 
 

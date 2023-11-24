@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a target="_blank" href="https://shopify.com">
+        <a href="https://shopify.com">
             <img class="logo" src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg" alt="">
             <img class="mobilelogo" src="https://crushingit.tech/hackathon-assets/shopify-icon.svg" alt="">
         </a>
@@ -19,19 +19,19 @@
             <input placeholder="Search" type="text" name="" id="">
         </div>
         <div class="profile_notifiation">
-            <button class="notification">
+            <button id="notification-tab" aria-haspopup="true" aria-expanded="false" aria-controls="notificationcontents" class="notification">
                 <svg width="20" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75203 14.4239L5.3061 14.1427C3.45144 13.9295 2.92542 11.4844 4.52838 10.5274L4.5933 10.4886C5.466 9.96761 6.00045 9.02609 6.00045 8.00969V7.5C6.00045 5.01472 8.01517 3 10.5005 3C12.9857 3 15.0005 5.01472 15.0005 7.5V8.00969C15.0005 9.02609 15.5349 9.96761 16.4076 10.4886L16.4725 10.5274C18.0755 11.4844 17.5495 13.9295 15.6948 14.1427L13.152 14.435V14.8C13.152 16.2912 11.9432 17.5 10.452 17.5C8.96086 17.5 7.75203 16.2912 7.75203 14.8V14.4239ZM11.652 14.5H9.25203V14.8C9.25203 15.4627 9.78929 16 10.452 16C11.1148 16 11.652 15.4627 11.652 14.8V14.5ZM8.50045 13H12.5005L15.5235 12.6525C15.953 12.6032 16.0748 12.0369 15.7036 11.8153L15.6387 11.7766C15.5591 11.7291 15.4815 11.6793 15.4057 11.6273C15.2506 11.521 15.1036 11.4055 14.9651 11.2818C14.9405 11.2598 14.9162 11.2377 14.8922 11.2152C14.0144 10.395 13.5005 9.23833 13.5005 8.00969V7.5C13.5005 5.84315 12.1573 4.5 10.5005 4.5C8.8436 4.5 7.50045 5.84315 7.50045 7.5V8.00969C7.50045 9.23833 6.98651 10.395 6.10871 11.2152C6.08469 11.2377 6.06039 11.2598 6.03583 11.2818C5.89734 11.4055 5.75029 11.521 5.59523 11.6273C5.51945 11.6793 5.44176 11.7291 5.36222 11.7766L5.29729 11.8153C4.9261 12.0369 5.0479 12.6032 5.47739 12.6525L8.50045 13Z" fill="#fff"/>
                 </svg>    
             </button>
             
-            <button class="profile">
+            <button aria-haspopup="true" aria-expanded="false" aria-controls="profilecontents" class="profile" id="profile-menu">
                 <h4>Davii Collections</h4>
                 <div>DC</div>
             </button>
         </div>
 
-        <div class="notificationcontents">
+        <div class="notificationcontents" id="notificationcontents" aria-label="Notification Tab">
             <div class="notificationcontentsheading">
                 <h4>Alerts</h4>
                 <div>
@@ -52,9 +52,9 @@
         </div>
 
         
-        <div class="profilecontents">
+        <div class="profilecontents" id="profilecontents" aria-label="Profile Menu" role="menu">
             <div class="profilecontent">
-                <a target="_blank" class="profilecontentsdiv1" href="https://admin.shopify.com/">
+                <a role="menuitem" target="_blank" class="profilecontentsdiv1" href="https://admin.shopify.com/">
                     <div class="profilecontentsdiv1contents">
                         <div>DC</div>
                         <h4>Davii Collections</h4>
@@ -63,7 +63,7 @@
                         <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="#303030" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <a target="_blank" class="profilecontentsstore" href="https://admin.shopify.com/">
+                <a role="menuitem" target="_blank" class="profilecontentsstore" href="https://admin.shopify.com/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.257 3H6.74302C6.35944 3 5.9971 3.17611 5.76012 3.47772L3.37394 6.51468C3.13169 6.823 3 7.20375 3 7.59586V8.25C3 9.31867 3.60958 10.245 4.5 10.7001V15.25C4.5 16.2165 5.2835 17 6.25 17H13.75C14.7165 17 15.5 16.2165 15.5 15.25V10.7001C16.3904 10.245 17 9.31867 17 8.25V7.76879C17 7.26465 16.8307 6.77511 16.5192 6.3787L14.2399 3.47772C14.0029 3.17611 13.6406 3 13.257 3ZM13 15.5H13.75C13.8881 15.5 14 15.3881 14 15.25V11C13.212 11 12.5014 10.6686 12 10.1375C11.4986 10.6686 10.788 11 10 11C9.21199 11 8.50138 10.6686 8 10.1375C7.49862 10.6686 6.78801 11 6 11V15.25C6 15.3881 6.11193 15.5 6.25 15.5H10V13C10 12.4477 10.4477 12 11 12H12C12.5523 12 13 12.4477 13 13V15.5ZM6 9.5H5.75C5.05964 9.5 4.5 8.94036 4.5 8.25V7.59586C4.5 7.53985 4.51881 7.48545 4.55342 7.44141L6.86453 4.5H13.1355L15.3397 7.30543C15.4436 7.43757 15.5 7.60075 15.5 7.76879V8.25C15.5 8.94036 14.9404 9.5 14.25 9.5H14C13.3096 9.5 12.75 8.94036 12.75 8.25V7.75C12.75 7.33579 12.4142 7 12 7C11.5858 7 11.25 7.33579 11.25 7.75V8.25C11.25 8.94036 10.6904 9.5 10 9.5C9.30964 9.5 8.75 8.94036 8.75 8.25V7.75C8.75 7.33579 8.41421 7 8 7C7.58579 7 7.25 7.33579 7.25 7.75V8.25C7.25 8.94036 6.69036 9.5 6 9.5Z" fill="#303030"/>
                     </svg>              
@@ -72,34 +72,20 @@
             </div>
             <hr>
             <div class="profilecontent">
-                <a target="_blank" href="https://admin.shopify.com/">
-                    <button>Help Center</button>
-                </a>
-                <a target="_blank" href="https://admin.shopify.com/">
-                    <button>Changelog</button>
-                </a>
-                <a target="_blank" href="https://admin.shopify.com/">
-                    <button>Community forums</button>
-                </a>
-                <a target="_blank" href="https://admin.shopify.com/">
-                    <button>Hire a Shopify Partner</button>
-                </a>
-                <a target="_blank" href="https://admin.shopify.com/">
-                    <button>Keyboard shortcuts</button>
-                </a>
+                <a role="menuitem" target="_blank" href="https://admin.shopify.com/">Help Center</a>
+                <a role="menuitem" target="_blank" href="https://admin.shopify.com/">Changelog</a>
+                <a role="menuitem" target="_blank" href="https://admin.shopify.com/">Community forums </a>
+                <a role="menuitem" target="_blank" href="https://admin.shopify.com/">Hire a Shopify Partner</a>
+                <a role="menuitem" target="_blank" href="https://admin.shopify.com/">Keyboard shortcuts</a>
             </div>
             <hr>
             <div class="profilecontent">
-                <a target="_blank" href="https://admin.shopify.com/" class="profileemail">
+                <a rol="menuitem" target="_blank" href="https://admin.shopify.com/" class="profileemail">
                     <h4>David Micheal</h4>
                     <p>davidmicheal@gmail.com</p>
                 </a>
-                <a target="_blank" href="https://admin.shopify.com/">
-                    <button>Manage account</button>
-                </a>
-                <a target="_blank" href="https://admin.shopify.com/">
-                    <button>Log out</button>
-                </a>
+                <a role="menuitem" target="_blank" href="https://admin.shopify.com/">Manage account</a>
+                <a role="menuitem" target="_blank" href="https://admin.shopify.com/">Log out</a>
             </div>
         </div>
     </header>
@@ -107,38 +93,153 @@
         <div class="selectplan">
             <p>Extend your trial for $1/month for 3 months on select plans.</p>
             <div class="selectplan_button_x">
-                <a href="https://www.shopify.com/pricing" target="_blank">
-                    <button>Select a plan</button>
-                </a>
-                <svg class="closeselectplan" width="20" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z" fill="#fff"/>
-                </svg>                
+                <a href="https://www.shopify.com/pricing">Select a plan</a>
+                <button class="closeselectplan">
+                    <svg width="20" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z" fill="#fff"/>
+                    </svg>
+                </button>                
             </div>
         </div>
-        <div>
-            <div>
+        <div class="onboarding">
+            <div class="onboarding-header">
+                <button id="onbording-control">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71967 8.46967C6.01256 8.17678 6.48744 8.17678 6.78033 8.46967L10.25 11.9393L13.7197 8.46967C14.0126 8.17678 14.4874 8.17678 14.7803 8.46967C15.0732 8.76256 15.0732 9.23744 14.7803 9.53033L10.7803 13.5303C10.4874 13.8232 10.0126 13.8232 9.71967 13.5303L5.71967 9.53033C5.42678 9.23744 5.42678 8.76256 5.71967 8.46967Z" fill="#4A4A4A"/>
+                    </svg>
+                </button>
                 <h4>Setup guide</h4>
                 <p>Use this personalized guide to get your store up and running.</p>
-                <div>
+                <div class="onboarding-completed">
                     <p><span>1</span> / 5 completed</p>
-                    <div></div>
+                    <div class=""></div>
                 </div>
             </div>
-            <div>
-                <div class="content1">
-                    <div>
-                        <div>
-                            <img src="" alt="">
-                            <h4>Customize your online store</h4>
-                        </div>
-                        <div>
-                            <p>Choose a theme and add your logo, colors, and images to reflect your brand</p>
-                            <button>Learn more</button>
-                        </div>
-                        <button>Customize theme</button>
+            <div class="onboarding-guides">
+                <div class="onboarding-guide onboarding-guide1">
+                    <div class="onboarding-guide-heading">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                        </svg>
+                        <h4>Customize your online store</h4>
                     </div>
-                    <div>
-                        <img src="" alt="">
+                    <div class="onboarding-guide-toggle active">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </button>
+                        <div class="onboarding-guide-contents">
+                            <div class="onboarding-guide-content">
+                                <h4>Customize your online store</h4>
+                                <p>Choose a theme and add your logo, colors, and images to reflect your brand. <span class="learn-more">Learn more</span></p>
+                                <button class="onboarding-button">Customize theme</button>
+                            </div>
+                            <div class="onboarding-guide-img">
+                                <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="onboarding-guide onboarding-guide2">
+                    <div class="onboarding-guide-heading active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                        </svg>
+                        <h4>Add your first product</h4>
+                    </div>
+                    <div class="onboarding-guide-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                        </svg>
+                        <div class="onboarding-guide-contents">
+                            <div class="onboarding-guide-content">
+                                <h4>Add your first product</h4>
+                                <p>Write a description, add photos, and set pricing for the products you plan to sell. <span class="learn-more">Learn more</span></p>
+                                <div class="buttons">
+                                    <button class="onboarding-button">Add product</button>
+                                    <button class="import-products">Import product</button>
+                                </div>
+                            </div>
+                            <div class="onboarding-guide-img">
+                                <img src="https://crushingit.tech/hackathon-assets/product.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="onboarding-guide onboarding-guide3">
+                    <div class="onboarding-guide-heading active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                        </svg>
+                        <h4>Add a custom domain</h4>
+                    </div>
+                    <div class="onboarding-guide-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                        </svg>
+                        <div class="onboarding-guide-contents">
+                            <div class="onboarding-guide-content">
+                                <h4>Add a custom domain</h4>
+                                <div>
+                                    <p>Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store. <span class="learn-more">Learn more</span></p>
+                                </div>
+                                <button class="onboarding-button">Add domain</button>
+                            </div>
+                            <div class="onboarding-guide-img">
+                                <img src="https://crushingit.tech/hackathon-assets/website.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="onboarding-guide onboarding-guide4">
+                    <div class="onboarding-guide-heading active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                        </svg>
+                        <h4>Name your store</h4>
+                    </div>
+                    <div class="onboarding-guide-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                        </svg>
+                        <div class="onboarding-guide-contents">
+                            <div class="onboarding-guide-content">
+                                <h4>Name your store</h4>
+                                <div>
+                                    <p>Your temporary store name is currently Davii collections. The store name appears in your admin and your online store. <span class="learn-more">Learn more</span></p>
+                                </div>
+                                <button class="onboarding-button">Name store</button>
+                            </div>
+                            <div class="onboarding-guide-img">
+                                <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="onboarding-guide onboarding-guide5">
+                    <div class="onboarding-guide-heading active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                        </svg>
+                        <h4>Set up a payment provider</h4>
+                    </div>
+                    <div class="onboarding-guide-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                        </svg>
+                        <div class="onboarding-guide-contents">
+                            <div class="onboarding-guide-content">
+                                <h4>Set up a payment provider</h4>
+                                <div>
+                                    <p>Choose a payment provider to start accepting payments. You’ll need to create an account with the payment provider and set it up with your Shopify store. <span class="learn-more">Learn more</span></p>
+                                </div>
+                                <button class="onboarding-button">Set up payment</button>
+                            </div>
+                            <div class="onboarding-guide-img">
+                                <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
