@@ -8,6 +8,7 @@ const onbordingControl = document.querySelector("#onbording-control")
 const onboardingGuides = document.querySelector('.onboarding-guides')
 const onboardingGuideHeading = document.querySelector('.onboarding-guide-heading')
 const onboardingGuideToggle = document.querySelector('.onboarding-guide-toggle')
+const progressBarNumber = document.querySelector(".progress-bar-number")
 
 const onboardingGuidesHeading = document.querySelectorAll(".onboarding-guide-heading")
 const onboardingGuidesToggle = document.querySelectorAll(".onboarding-guide-toggle")
@@ -39,25 +40,7 @@ onbordingControl.addEventListener("click", () => {
     onboardingGuides.classList.toggle("active")
 })
 
-
-// 
-
-// function checkIfContainsClass() {
-//     if(onboardingGuideToggle.classList.contains="active"){
-//         onboardingGuideHeading.remove()
-//     }
-// }
-
-// checkIfContainsClass()
-
-// onboardingGuideHeading.addEventListener("click", () => {
-//     onboardingGuideToggle.classList.add("active")
-//     onboardingGuideHeading.remove()
-// })
-
-
-
-//
+// Open and Close Onboarding Elements on active
 
 onboardingGuidesHeading[0].addEventListener("click", () => {
 
@@ -133,3 +116,37 @@ onboardingGuidesHeading[4].addEventListener("click", () => {
     onboardingGuidesHeading[2].classList.add("active")
     onboardingGuidesHeading[1].classList.add("active")
 })
+
+
+let currentProgress = 0;
+const totalElements = 5; // Change this to the total number of elements
+
+function updateProgress(elementNumber) {
+    if (elementNumber === currentProgress + 1) {
+        // Check an element
+        currentProgress++;
+        progressBarNumber.innerHTML++;
+        // if(progressBarNumber.innerHTML > 1){
+            
+        // }
+    } else if (elementNumber === currentProgress) {
+        // Uncheck the last checked element
+        currentProgress--;
+        progressBarNumber.innerHTML--;
+    }
+
+    updateProgressBar();
+}
+
+function updateProgressBar() {
+    const progressBar = document.getElementById("progress-bar");
+
+    const progressPercentage = (currentProgress / totalElements) * 100;
+    progressBar.style.width = `${progressPercentage}%`;
+}
+
+// Optional: Reset the progress bar
+function resetProgress() {
+    currentProgress = 0;
+    updateProgressBar();
+}

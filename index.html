@@ -111,8 +111,10 @@
                 <h4>Setup guide</h4>
                 <p>Use this personalized guide to get your store up and running.</p>
                 <div class="onboarding-completed">
-                    <p><span>1</span> / 5 completed</p>
-                    <div class=""></div>
+                    <p><span class="progress-bar-number">0</span> / 5 completed</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="onboarding-guides">
@@ -124,7 +126,7 @@
                         <h4>Customize your online store</h4>
                     </div>
                     <div class="onboarding-guide-toggle active">
-                        <button>
+                        <button onclick="updateProgress(1)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
                             </svg>
@@ -149,9 +151,11 @@
                         <h4>Add your first product</h4>
                     </div>
                     <div class="onboarding-guide-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                        </svg>
+                        <button onclick="updateProgress(2)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </button>
                         <div class="onboarding-guide-contents">
                             <div class="onboarding-guide-content">
                                 <h4>Add your first product</h4>
@@ -175,9 +179,11 @@
                         <h4>Add a custom domain</h4>
                     </div>
                     <div class="onboarding-guide-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                        </svg>
+                        <button onclick="updateProgress(3)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </button>
                         <div class="onboarding-guide-contents">
                             <div class="onboarding-guide-content">
                                 <h4>Add a custom domain</h4>
@@ -200,9 +206,11 @@
                         <h4>Name your store</h4>
                     </div>
                     <div class="onboarding-guide-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                        </svg>
+                        <button onclick="updateProgress(4)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </button>
                         <div class="onboarding-guide-contents">
                             <div class="onboarding-guide-content">
                                 <h4>Name your store</h4>
@@ -225,9 +233,11 @@
                         <h4>Set up a payment provider</h4>
                     </div>
                     <div class="onboarding-guide-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                        </svg>
+                        <button onclick="updateProgress(5)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </button>
                         <div class="onboarding-guide-contents">
                             <div class="onboarding-guide-content">
                                 <h4>Set up a payment provider</h4>

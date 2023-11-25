@@ -511,6 +511,7 @@ header{
 .onboarding-completed{
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 .onboarding-completed p{
@@ -519,6 +520,21 @@ header{
     font-weight: 400;
     line-height: 130%;
     color: var(--gray-200);
+}
+
+.progress-container {
+    width: 72px;
+    background-color: #f0f0f0;
+    border-radius: 28px;
+}
+
+.progress-bar {
+    height: 4px;
+    background-color: var(--bc-300);
+    width: 14.4px;
+    transition: width 0.3s ease;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
 }
 
 .onboarding-guides{
