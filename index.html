@@ -119,137 +119,102 @@
             </div>
             <div class="onboarding-guides">
                 <div class="onboarding-guide onboarding-guide1">
-                    <div class="onboarding-guide-heading">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                        </svg>
-                        <h4>Customize your online store</h4>
-                    </div>
-                    <div class="onboarding-guide-toggle active">
-                        <button onclick="updateProgress(1)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                            </svg>
-                        </button>
-                        <div class="onboarding-guide-contents">
-                            <div class="onboarding-guide-content">
-                                <h4>Customize your online store</h4>
-                                <p>Choose a theme and add your logo, colors, and images to reflect your brand. <span class="learn-more">Learn more</span></p>
-                                <button class="onboarding-button">Customize theme</button>
-                            </div>
-                            <div class="onboarding-guide-img">
-                                <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="">
-                            </div>
+                    <div class="onboarding-guide-contents">
+                        <a class="onboarding-guide-heading">
+                            <button class="toggle" onclick="updateProgress(1)">
+                                <img class="showimg" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                                <img class="image" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                            </button>
+                            <h4>Customize your online store</h4>
+                        </a>
+                        <div class="onboarding-guide-content">
+                            <p>Choose a theme and add your logo, colors, and images to reflect your brand. <span class="learn-more">Learn more</span></p>
+                            <button class="onboarding-button">Customize theme</button>
                         </div>
+                    </div>
+                    <div class="onboarding-guide-img">
+                        <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="">
                     </div>
                 </div>
                 <div class="onboarding-guide onboarding-guide2">
-                    <div class="onboarding-guide-heading active">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                        </svg>
-                        <h4>Add your first product</h4>
-                    </div>
-                    <div class="onboarding-guide-toggle">
-                        <button onclick="updateProgress(2)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                            </svg>
-                        </button>
-                        <div class="onboarding-guide-contents">
-                            <div class="onboarding-guide-content">
-                                <h4>Add your first product</h4>
-                                <p>Write a description, add photos, and set pricing for the products you plan to sell. <span class="learn-more">Learn more</span></p>
-                                <div class="buttons">
-                                    <button class="onboarding-button">Add product</button>
-                                    <button class="import-products">Import product</button>
-                                </div>
-                            </div>
-                            <div class="onboarding-guide-img">
-                                <img src="https://crushingit.tech/hackathon-assets/product.png" alt="">
+                    <div class="onboarding-guide-contents">
+                        <a class="onboarding-guide-heading">
+                            <button class="toggle" onclick="updateProgress(2)">
+                                <img class="showimg" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                                <img class="image" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                            </button>
+                            <h4>Add your first product</h4>
+                        </a>
+                        <div class="onboarding-guide-content">
+                            <p>Write a description, add photos, and set pricing for the products you plan to sell. <span class="learn-more">Learn more</span></p>
+                            <div class="buttons">
+                                <button class="onboarding-button">Add product</button>
+                                <button class="import-products">Import product</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="onboarding-guide-img">
+                        <img src="https://crushingit.tech/hackathon-assets/product.png" alt="">
                     </div>
                 </div>
                 <div class="onboarding-guide onboarding-guide3">
-                    <div class="onboarding-guide-heading active">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                        </svg>
-                        <h4>Add a custom domain</h4>
-                    </div>
-                    <div class="onboarding-guide-toggle">
-                        <button onclick="updateProgress(3)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                            </svg>
-                        </button>
-                        <div class="onboarding-guide-contents">
-                            <div class="onboarding-guide-content">
-                                <h4>Add a custom domain</h4>
-                                <div>
-                                    <p>Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store. <span class="learn-more">Learn more</span></p>
-                                </div>
-                                <button class="onboarding-button">Add domain</button>
+                    <div class="onboarding-guide-contents">
+                        <a class="onboarding-guide-heading">
+                            <button class="toggle" onclick="updateProgress(3)">
+                                <img class="showimg" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                                <img class="image" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                            </button>
+                            <h4>Add a custom domain</h4>
+                        </a>
+                        <div class="onboarding-guide-content">
+                            <div>
+                                <p>Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store. <span class="learn-more">Learn more</span></p>
                             </div>
-                            <div class="onboarding-guide-img">
-                                <img src="https://crushingit.tech/hackathon-assets/website.png" alt="">
-                            </div>
+                            <button class="onboarding-button">Add domain</button>
                         </div>
+                    </div>
+                    <div class="onboarding-guide-img">
+                        <img src="https://crushingit.tech/hackathon-assets/website.png" alt="">
                     </div>
                 </div>
                 <div class="onboarding-guide onboarding-guide4">
-                    <div class="onboarding-guide-heading active">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                        </svg>
-                        <h4>Name your store</h4>
-                    </div>
-                    <div class="onboarding-guide-toggle">
-                        <button onclick="updateProgress(4)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                            </svg>
-                        </button>
-                        <div class="onboarding-guide-contents">
-                            <div class="onboarding-guide-content">
-                                <h4>Name your store</h4>
-                                <div>
-                                    <p>Your temporary store name is currently Davii collections. The store name appears in your admin and your online store. <span class="learn-more">Learn more</span></p>
-                                </div>
-                                <button class="onboarding-button">Name store</button>
+                    <div class="onboarding-guide-contents">
+                        <a class="onboarding-guide-heading">
+                            <button class="toggle" onclick="updateProgress(4)">
+                                <img class="showimg" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                                <img class="image" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                            </button>
+                            <h4>Name your store</h4>
+                        </a>
+                        <div class="onboarding-guide-content">
+                            <div>
+                                <p>Your temporary store name is currently Davii collections. The store name appears in your admin and your online store. <span class="learn-more">Learn more</span></p>
                             </div>
-                            <div class="onboarding-guide-img">
-                                <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="">
-                            </div>
+                            <button class="onboarding-button">Name store</button>
                         </div>
+                    </div>
+                    <div class="onboarding-guide-img">
+                        <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="">
                     </div>
                 </div>
                 <div class="onboarding-guide onboarding-guide5">
-                    <div class="onboarding-guide-heading active">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                        </svg>
-                        <h4>Set up a payment provider</h4>
-                    </div>
-                    <div class="onboarding-guide-toggle">
-                        <button onclick="updateProgress(5)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                            </svg>
-                        </button>
-                        <div class="onboarding-guide-contents">
-                            <div class="onboarding-guide-content">
-                                <h4>Set up a payment provider</h4>
-                                <div>
-                                    <p>Choose a payment provider to start accepting payments. You’ll need to create an account with the payment provider and set it up with your Shopify store. <span class="learn-more">Learn more</span></p>
-                                </div>
-                                <button class="onboarding-button">Set up payment</button>
+                    <div class="onboarding-guide-contents">
+                        <a class="onboarding-guide-heading">
+                            <button class="toggle" onclick="updateProgress(5)">
+                                <img class="showimg" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                                <img class="image" src="https://mitchmousepage.netlify.app/img/dash.png" alt="">
+                            </button>
+                            <h4>Set up a payment provider</h4>
+                        </a>
+                        <div class="onboarding-guide-content">
+                            <div>
+                                <p>Choose a payment provider to start accepting payments. You’ll need to create an account with the payment provider and set it up with your Shopify store. <span class="learn-more">Learn more</span></p>
                             </div>
-                            <div class="onboarding-guide-img">
-                                <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="">
-                            </div>
+                            <button class="onboarding-button">Set up payment</button>
                         </div>
+                    </div>
+                    <div class="onboarding-guide-img">
+                        <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="">
                     </div>
                 </div>
             </div>

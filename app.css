@@ -453,6 +453,7 @@ header{
 }
 
 /* Onboarding Styling */
+
 .onboarding{
     width: min(800px, 100%);
     background-color: var(--pwhite);
@@ -523,7 +524,8 @@ header{
 }
 
 .progress-container {
-    width: 72px;
+    width: 10%;
+    /* width: 72px; */
     background-color: #f0f0f0;
     border-radius: 28px;
 }
@@ -531,7 +533,8 @@ header{
 .progress-bar {
     height: 4px;
     background-color: var(--bc-300);
-    width: 14.4px;
+    width: 0%;
+    /* width: 14.4px; */
     transition: width 0.3s ease;
     border-top-left-radius: 28px;
     border-bottom-left-radius: 28px;
@@ -547,39 +550,34 @@ header{
     display: none;
 }
 
-.onboarding-guide-toggle{
-    display: none;
-    gap: 8px;
-    padding: 8px 8px 12px 8px;
-    border-radius: 10px;
-    background: #F3F3F3;
-    align-items: flex-start;
-}
-
-.onboarding-guide-toggle.active{
+.onboarding-guide{
     display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    border-radius: 10px;
+    padding: 8px 8px 12px 8px;
 }
 
-.onboarding-guide-toggle button{
+.onboarding-guide.active{
+    background: #F3F3F3;
+}
+
+.onboarding-guide-heading{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    cursor: pointer;
+    /* padding: 8px 8px 12px 8px; */
+}
+
+.onboarding-guide-heading button{
     border: none;
     background: none;
     cursor: pointer;
 }
 
-.onboarding-guide .onboarding-guide-heading{
-    display: none;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    cursor: pointer;
-    padding: 8px 8px 12px 8px;
-}
-
-.onboarding-guide .onboarding-guide-heading.active{
-    display: flex;
-}
-
-.onboarding-guide .onboarding-guide-heading h4{
+.onboarding-guide-heading h4{
     font-weight: 500;
     color: var(--gray-200);
     font-size: 13px;
@@ -589,15 +587,30 @@ header{
 
 .onboarding-guide-contents{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
 }
 
 .onboarding-guide-content{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    align-self: flex-end;
+    width: 93.1%;
+}
+
+.onboarding-guide-content.active{
+    display: flex;
+}
+
+.onboarding-guide-img{
+    display: none;
+}
+
+.onboarding-guide-img.active{
+    display: block;
 }
 
 .onboarding-guide-content h4{
@@ -614,6 +627,7 @@ header{
     font-weight: 500;
     line-height: 140%;
     color: var(--bc-100);
+    width: 484px;
 
 }
 
@@ -642,17 +656,13 @@ header{
     box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
 }
 
-.onboarding-guide .onboarding-guide-content p{
-    width: 484px;
-}
-
-.onboarding-guide2 .onboarding-guide-content .buttons{
+.onboarding-guide-content .buttons{
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.onboarding-guide2 .onboarding-guide-content .buttons .import-products{
+.onboarding-guide-content .buttons .import-products{
     padding: 6px 12px;
     border-radius: 6px;
     background: none;
@@ -665,6 +675,21 @@ header{
 }
 
 
+.showimg{
+    display: block;
+}
+
+.showimg.notActive{
+    display: none;
+}
+
+.image{
+    display: none;
+}
+
+.image.active{
+    display: block;
+}
 
 
 
